@@ -54,12 +54,10 @@ html, body {
  @media only screen and (max-width: 991px) {
     .App {
       grid-template-columns: repeat(1, 1fr);
-      height: 100vh;
       h1{
         font-size: 1.4rem;
     }
       .theoretical{
-        height: 50vh;
         ul{
             li{
                 span{
@@ -71,7 +69,7 @@ html, body {
         }
     }
     .practical{
-       height: 50vh;
+       margin: auto;
    }
     }
   }
