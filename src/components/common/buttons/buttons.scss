@@ -1,0 +1,58 @@
+
+
+$link1: #1E1C0C;
+$linkBase: rgba(0, 0, 0, 0);
+$linkGreen: #00ff4c;
+$linkBlue: #2600ff;
+$link3: #ff7300;
+$linkPurple: #ae00ff;
+
+.highlight.link{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  background: none!important;
+  border: none;
+  padding: 0!important;
+	text-decoration: none;
+  position: relative;
+	z-index: 1;
+	display: inline-flex;
+  padding-bottom: .2rem;
+  cursor: pointer;
+  &:hover{
+    &:before{
+        width: 0;
+        transition-duration: .15s;
+    }
+  }
+  &:before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: linear-gradient(to top, $link1 10%, $linkBase 10%);
+    left: 0;
+    bottom: 1px;
+    z-index: -1;
+    will-change: width;
+    transform-origin: left bottom;
+    transition: width .1s ease-out;
+    
+  }
+}
+
+// Green underline
+.highlight.link.green{
+  font-weight: 300;
+  &:before{
+    background-image: linear-gradient(to top, $linkGreen 10%, $linkBase 10%);
+  }
+}
+
+// Blue underline
+.highlight.link.blue{
+  font-weight: 900;
+  &:before{
+    background-image: linear-gradient(to top, $linkBlue 10%, $linkBase 10%);
+  }
+}
